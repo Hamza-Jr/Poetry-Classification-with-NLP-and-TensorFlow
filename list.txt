@@ -1,5 +1,7 @@
+fruit:
 orange
 bnanas
 apples
+vegetables :
 tomato
 botato

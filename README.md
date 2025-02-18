@@ -47,32 +47,32 @@ pip install pandas numpy nltk tensorflow scikit-learn
 The text data is preprocessed with the following steps:
 
 -Lowercasing the text.
--Removing punctuation and extra spaces.
--Removing stopwords using nltk.
--Tokenizing the text into word sequences.
--Padding sequences to a uniform length.
+-**Removing punctuation and extra spaces.**
+-**Removing stopwords using nltk.**
+-**Tokenizing the text into word sequences.**
+-**Padding sequences to a uniform length.**
 
 ---
 
 ## ** Model Architectures**
 The LSTM-based model consists of:
 
--Embedding Layer: Converts words into dense vector representations.
--LSTM Layers: Capture sequential dependencies in the text.
--Dropout Layer: Reduces overfitting.
--Dense Layers: Fully connected layers for classification.
--Output Layer: Uses a Softmax activation function for multi-class classification.
+-**Embedding Layer**: Converts words into dense vector representations.
+-**LSTM Layers**: Capture sequential dependencies in the text.
+-**Dropout Layer**: Reduces overfitting.
+-**Dense Layers**: Fully connected layers for classification.
+-**Output Layer**: Uses a Softmax activation function for multi-class classification.
 
 ---
 
 ## ** Training and Evaluation**
 
 Training Configuration
--Optimizer: Adam
--Loss Function: Sparse Categorical Crossentropy
--Metrics: Accuracy
--Batch Size: 32
--Epochs: 5
+- **Optimizer **: Adam
+-**Loss Function**: Sparse Categorical Crossentropy
+-**Metrics**: Accuracy
+-**Batch Size**: 32
+-**Epochs**: 5
 
 
 

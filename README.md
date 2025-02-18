@@ -1,46 +1,87 @@
-# **Poetry Classification with NLP and TensorFlow**
+# **Poem Genre Classification using NLP and LSTM**
 
-### **Project Overview**
-This project aims to classify poems into different **literary genres** using **Natural Language Processing (NLP)** and **deep learning**. The model is trained on a dataset of poems, utilizing **word embeddings**, **sequence models**, and **text classification techniques** to achieve accurate categorization.
-
----
-
-## **📌 Table of Contents**
-- [📖 Introduction](#-introduction)
-- [📂 Datasets](#-datasets)
-- [⚙️ Dependencies](#-dependencies)
-- [🧠 Model Architecture](#-model-architecture)
-- [📊 Training and Evaluation](#-training-and-evaluatio
-- n)
-- [🎯 Results](#-results)
-- [🚀 Future Enhancements](#-future-enhancements)
-- [▶️ How to Run](#-how-to-run)
+### **📌 Project Overview**
+This project applies **Natural Language Processing (NLP)** and **Deep Learning** techniques to classify poems into different genres. Using **LSTM (Long Short-Term Memory) networks**, we process and analyze poetic texts to automatically identify their categories.
 
 ---
 
-## **📖 Introduction**
-This project classifies poetry into different genres such as:
-- **Romance**
-- **Nature**
-- **Sadness**
-- **Motivation**
-- **Philosophy**
-
-The system leverages NLP techniques like **TF-IDF vectorization**, **word embeddings**, and **RNN/LSTM models** for efficient text classification. The model is built using **TensorFlow and Keras**, incorporating preprocessing steps like **stopword removal, lemmatization, and tokenization**.
+## **📂 Table of Contents**
+- [ Introduction](#-introduction)
+- [ Dataset](#-dataset)
+- [ Dependencies](#-dependencies)
+- [ Preprocessing](#-preprocessing)
+- [ Model Architecture](#-model-architecture)
+- [ Training and Evaluation](#-training-and-evaluation)
 
 ---
 
-## **📂 Datasets**
-The dataset consists of poems collected from various sources and structured into labeled text samples.
+## ** Introduction**
+This NLP-based project classifies poems into genres using **LSTM networks**. The process involves:
+- **Text Preprocessing**: Stopword removal, tokenization, and padding sequences.
+- **Word Embeddings**: Words converted into dense vector representations.
+- **Deep Learning Model**: LSTM layers for text sequence learning.
 
-1. **Kaggle Poetry Dataset**  
-   - Contains thousands of poems categorized by themes and authors.  
-   - 🔗 [Dataset Link](https://www.kaggle.com/datasets)
+The model is trained using **TensorFlow and Keras**, providing accurate classification for poetic genres.
 
 ---
 
-## **⚙️ Dependencies**
-To run this project, install the following libraries:
+## ** Dataset**
+The dataset contains labeled poems categorized into various genres. The key datasets used are:
+- **Training Dataset**: `Poem_classification - train_data.csv`
+- **Test Dataset**: `Poem_classification - test_data.csv`
 
-```bash
-pip install tensorflow keras numpy pandas nltk scikit-learn matplotlib
+Each dataset contains:
+- **Poem**: The text of the poem.
+- **Genre**: The corresponding category of the poem.
+
+---
+
+## ** Dependencies**
+Install the required libraries before running the project:
+
+bash
+pip install pandas numpy nltk tensorflow scikit-learn
+
+
+## ** preprocessing**
+The text data is preprocessed with the following steps:
+
+-Lowercasing the text.
+-Removing punctuation and extra spaces.
+-Removing stopwords using nltk.
+-Tokenizing the text into word sequences.
+-Padding sequences to a uniform length.
+
+---
+
+## ** Model Architectures**
+The LSTM-based model consists of:
+
+-Embedding Layer: Converts words into dense vector representations.
+-LSTM Layers: Capture sequential dependencies in the text.
+-Dropout Layer: Reduces overfitting.
+-Dense Layers: Fully connected layers for classification.
+-Output Layer: Uses a Softmax activation function for multi-class classification.
+
+---
+
+## ** Training and Evaluation**
+
+Training Configuration
+-Optimizer: Adam
+-Loss Function: Sparse Categorical Crossentropy
+-Metrics: Accuracy
+-Batch Size: 32
+-Epochs: 5
+
+
+
+
+
+
+
+
+
+
+---
+
